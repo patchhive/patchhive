@@ -1,16 +1,104 @@
-## Hi there 👋
+# 🐝 PatchHive
 
-<!--
-**patchhive/patchhive** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<p align="center">
+  <img src="./patchhive.svg" width="120" />
+</p>
 
-Here are some ideas to get you started:
+<h1 align="center">PatchHive</h1>
+<p align="center"><b>Autonomous software maintenance powered by intelligent agent swarms.</b></p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<p align="center">
+  <img src="https://img.shields.io/badge/status-alpha-orange" />
+  <img src="https://img.shields.io/badge/agents-multi--agent-blue" />
+  <img src="https://img.shields.io/badge/license-MIT-green" />
+</p>
+
+---
+
+## 🚀 What is PatchHive?
+
+PatchHive is a next-generation developer platform where autonomous agents:
+
+- 🔍 Discover issues  
+- 💀 Fix bugs  
+- 🧪 Validate changes  
+- 🔗 Maintain dependencies  
+- ⚡ Patch vulnerabilities  
+- 🔧 Continuously improve code  
+
+All without human intervention.
+
+---
+
+## 💀 RepoReaper (Flagship)
+
+> From issue → fix → PR. Fully autonomous.
+
+```bash
+reaper scan
+reaper fix --auto
+reaper pr
+```
+
+---
+
+## 🧩 Ecosystem
+
+| Product        | Description |
+|----------------|------------|
+| 💀 RepoReaper  | Autonomous issue resolution |
+| 🔍 IssueHunter | Finds bugs & technical debt |
+| 🧪 TestSwarm   | Generates & runs tests |
+| 🔗 DepKeeper   | Smart dependency updates |
+| ⚡ VulnStinger | Security scanning & patching |
+| 🔧 RefactorBee | Continuous code improvement |
+
+---
+
+## 🧠 Architecture
+
+```
+        HiveMind
+            │
+   ┌────────┼────────┐
+IssueHunter │ VulnStinger
+      │     │
+      ▼     ▼
+        RepoReaper
+            │
+   ┌────────┼────────┐
+ TestSwarm RefactorBee DepKeeper
+```
+
+---
+
+## 🔥 Why PatchHive?
+
+Because software shouldn't decay.
+
+PatchHive creates systems that:
+- maintain themselves
+- improve over time
+- reduce human overhead
+
+---
+
+## 🛣 Roadmap
+
+- [ ] RepoReaper v1
+- [ ] TestSwarm integration
+- [ ] IssueHunter release
+- [ ] Multi-repo orchestration
+- [ ] HiveCore intelligence layer
+
+---
+
+## 🤝 Contributing
+
+PRs welcome. Agents welcome.
+
+---
+
+## 📢 Vision
+
+> A world where codebases maintain themselves.
