@@ -41,6 +41,125 @@ reaper pr
 
 ---
 
+## 💀 RepoReaper by PatchHive
+ - Autonomous issue resolution for your repositories.
+
+RepoReaper scans your GitHub issues, identifies high-impact problems, generates fixes, validates them, and opens pull requests—without human intervention.
+
+✨ Features
+Issue prioritization using AI scoring
+Automatic patch generation
+Test execution + validation gates
+Clean, review-ready pull requests
+🧠 Why it matters
+
+Stop letting issues pile up. RepoReaper continuously clears your backlog.
+
+## 🔍 IssueHunter by PatchHive
+ - Find problems before they slow you down.
+
+IssueHunter continuously analyzes your codebase and issue history to detect bugs, technical debt, and hidden risks—before they become real problems.
+
+✨ Features
+Detects stale / ignored issues
+Surfaces TODO / FIXME patterns
+Clusters duplicate problems
+Assigns priority scores
+🧠 Why it matters
+
+You can’t fix what you don’t see. IssueHunter gives you visibility.
+
+## 🧪 TestSwarm by PatchHive
+ - Autonomous testing that evolves with your code.
+
+TestSwarm generates, runs, and maintains tests automatically—ensuring every change is validated before it ships.
+
+✨ Features
+AI-generated unit + integration tests
+Edge-case discovery
+Regression detection
+Continuous validation pipelines
+🧠 Why it matters
+
+Trust is everything. TestSwarm makes autonomous fixes safe.
+
+## 🔗 DepKeeper by PatchHive
+ - Dependency management without the noise.
+
+DepKeeper keeps your dependencies up to date, resolves breaking changes, and ensures compatibility—without spamming useless PRs.
+
+✨ Features
+Smart dependency upgrades
+Breaking change detection
+Auto-fix for version conflicts
+Test-backed updates
+🧠 Why it matters
+
+Dependencies shouldn’t be a burden. DepKeeper handles them quietly.
+
+## ⚡ VulnStinger by PatchHive
+ - Find and patch vulnerabilities—automatically.
+
+VulnStinger scans your codebase for security issues and patches them before they can be exploited.
+
+✨ Features
+Vulnerability detection (patterns + CVEs)
+Auto-generated security patches
+Risk scoring
+Secure coding suggestions
+🧠 Why it matters
+
+Security isn’t optional. VulnStinger makes it continuous.
+
+## 🔧 RefactorBee by PatchHive
+ - Continuously improve your codebase.
+
+RefactorBee analyzes your code and applies safe, incremental improvements to readability, performance, and structure.
+
+✨ Features
+Code simplification
+Dead code removal
+Performance optimizations
+Style consistency
+🧠 Why it matters
+
+Great codebases aren’t written—they’re maintained.
+
+## 🧠 (Future) HiveCore by PatchHive
+
+The intelligence layer behind PatchHive.
+
+HiveCore connects all PatchHive products into a unified system, enabling shared context, learning, and coordination across agents.
+
+---
+
+## 🧠 Vision
+A fully autonomous maintenance layer for all software.
+
+---
+
+## 🛠 Example CLI
+
+```bash
+reaper scan
+reaper fix --auto
+reaper pr
+```
+
+---
+
+## 📊 Architecture
+
+Agents communicate through a shared intelligence layer (HiveMind) and execute tasks in parallel.
+
+---
+
+## 📢 Launch
+
+PatchHive introduces a new paradigm:
+software that maintains itself.
+
+
 ## 🧩 Ecosystem
 
 | Product        | Description |
