@@ -41,9 +41,6 @@ reaper pr
 
 ---
 
-## 💀 RepoReaper by PatchHive
- - Autonomous issue resolution for your repositories.
-
 RepoReaper scans your GitHub issues, identifies high-impact problems, generates fixes, validates them, and opens pull requests—without human intervention.
 
 ✨ Features
