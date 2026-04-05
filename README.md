@@ -4,7 +4,6 @@
   <img src="./patchhive.png" width="120" />
 </p>
 
-<h1 align="center">PatchHive</h1>
 <p align="center"><b>Autonomous software maintenance powered by intelligent agent swarms.</b></p>
 
 <p align="center">
