@@ -1,7 +1,7 @@
 # 🐝 PatchHive
 
 <p align="center">
-  <img src="./patchhive.svg" width="120" />
+  <img src="./patchhive.png" width="120" />
 </p>
 
 <h1 align="center">PatchHive</h1>
