@@ -1,219 +1,135 @@
 # 🐝 PatchHive
 
 <p align="center">
-  <img src="./patchhive.png" width="120" />
+  <img src="./patchhive.png" width="120" alt="PatchHive logo" />
 </p>
-
-<p align="center"><b>Autonomous software maintenance powered by intelligent agent swarms.</b></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-alpha-orange" />
-  <img src="https://img.shields.io/badge/agents-multi--agent-blue" />
-  <img src="https://img.shields.io/badge/license-MIT-green" />
+  <b>Autonomous software maintenance that stays visible, reviewable, and trustworthy.</b>
 </p>
 
----
+PatchHive is a software maintenance platform for teams that want codebase upkeep to become visible, reviewable, and progressively automated.
 
-## 🚀 What is PatchHive?
+It is not another interactive coding assistant. PatchHive is built around autonomous, outbound contribution: it finds maintenance work, evaluates risk, remembers repo-specific lessons, and can open clearly attributed pull requests when the operator allows it.
 
-PatchHive is a next-generation developer platform where autonomous agents:
+## What PatchHive Does
 
-- 🔍 Discover issues  
-- 💀 Fix bugs  
-- 🧪 Validate changes  
-- 🔗 Maintain dependencies  
-- ⚡ Patch vulnerabilities  
-- 🔧 Continuously improve code  
+PatchHive turns maintenance from a pile of scattered signals into an operating loop:
 
-All without human intervention.
+1. Detect maintenance pressure before it becomes urgent.
+2. Review risk before automation touches code.
+3. Remember conventions, failures, and reviewer feedback across runs.
+4. Generate patches only after the signal and trust layers are in place.
+5. Coordinate the suite through one control plane without making products dependent on it.
 
----
+Every product remains standalone. HiveCore brings them together into one interface.
 
-## 💀 RepoReaper (Flagship)
+## Product Suite
 
-> From issue → fix → PR. Fully autonomous.
+| Product | Role |
+| --- | --- |
+| SignalHive | Finds stale work, duplicate issues, recurring bug patterns, TODO/FIXME hotspots, and maintenance drag. |
+| TrustGate | Reviews diffs against repo-specific safety rules and returns `safe`, `warn`, or `block`. |
+| RepoMemory | Stores durable repo conventions, review feedback, hotspot history, and failure lessons. |
+| FailGuard | Cross-cutting RepoMemory capability that turns bad outcomes into future guardrails. |
+| RepoReaper | Finds fixable issues, generates patches, validates them, and opens attributed pull requests. |
+| ReviewBee | Converts PR review threads into an actionable follow-up checklist. |
+| MergeKeeper | Decides whether a PR is actually ready to merge, blocked, or on hold. |
+| FlakeSting | Detects flaky CI behavior and explains why the signal is unstable. |
+| DepTriage | Ranks dependency update noise by urgency and practical impact. |
+| VulnTriage | Turns security alerts into an engineering queue with clear next steps. |
+| RefactorScout | Surfaces conservative, high-value refactor opportunities. |
+| HiveCore | Centralizes suite visibility, shared defaults, run history, and product launch control. |
 
-```bash
-reaper scan
-reaper fix --auto
-reaper pr
-```
+## How The System Fits
 
----
+| Layer | Products | What They Contribute |
+| --- | --- | --- |
+| Discovery and signals | SignalHive, FlakeSting, DepTriage, VulnTriage, RefactorScout, ReviewBee | Surface maintenance pressure from issues, CI, dependencies, security alerts, refactor candidates, and PR review threads. |
+| Trust and memory | TrustGate, RepoMemory, FailGuard, MergeKeeper | Evaluate risk, preserve repo-specific lessons, convert bad outcomes into guardrails, and decide whether PRs are truly merge-ready. |
+| Autonomous action | RepoReaper | Turns trusted candidate work into validated patches and clearly attributed pull requests. |
+| Suite control plane | HiveCore | Brings standalone products into one operating interface for health, launch control, shared defaults, run history, and product handoffs. |
 
-RepoReaper scans your GitHub issues, identifies high-impact problems, generates fixes, validates them, and opens pull requests—without human intervention.
+PatchHive matures automation in that order: visibility first, trust and memory second, autonomous write actions after that foundation exists. HiveCore coordinates the suite, but every product remains independently runnable and useful on its own.
 
-✨ Features
-Issue prioritization using AI scoring
-Automatic patch generation
-Test execution + validation gates
-Clean, review-ready pull requests
-🧠 Why it matters
+## Why It Is Different
 
-Stop letting issues pile up. RepoReaper continuously clears your backlog.
+PatchHive is designed for radical delegation, not chat-driven pairing.
 
-## 🔍 IssueHunter by PatchHive
- - Find problems before they slow you down.
+- Operators choose broad topics, languages, auth, and safety settings.
+- Products discover candidate repos, issues, PRs, and risks on their own.
+- Autonomous PRs should come from the PatchHive GitHub identity.
+- PR bodies disclose that the work was generated by PatchHive.
+- Trust is earned through visible output, reviewable evidence, and consistent history.
 
-IssueHunter continuously analyzes your codebase and issue history to detect bugs, technical debt, and hidden risks—before they become real problems.
+The goal is not to pretend automation is human. The goal is to make automation constrained, legible, and useful enough that maintainers can judge it on the work.
 
-✨ Features
-Detects stale / ignored issues
-Surfaces TODO / FIXME patterns
-Clusters duplicate problems
-Assigns priority scores
-🧠 Why it matters
+## Current Focus
 
-You can’t fix what you don’t see. IssueHunter gives you visibility.
+PatchHive already has the core product suite, shared Rust crates, shared frontend shell, Docker support, exported standalone mirrors, and HiveCore control-plane wiring.
 
-## 🧪 TestSwarm by PatchHive
- - Autonomous testing that evolves with your code.
+The active path is:
 
-TestSwarm generates, runs, and maintains tests automatically—ensuring every change is validated before it ships.
+1. Bring up SignalHive, TrustGate, and RepoReaper together.
+2. Use HiveCore to monitor health, capabilities, run history, and contract drift.
+3. Exercise the first real handoff path: SignalHive finds work, TrustGate evaluates risk, RepoReaper acts only when the gate is clear.
+4. Feed rejected or painful outcomes back into RepoMemory through FailGuard.
 
-✨ Features
-AI-generated unit + integration tests
-Edge-case discovery
-Regression detection
-Continuous validation pipelines
-🧠 Why it matters
+## Local Development
 
-Trust is everything. TestSwarm makes autonomous fixes safe.
-
-## 🔗 DepKeeper by PatchHive
- - Dependency management without the noise.
-
-DepKeeper keeps your dependencies up to date, resolves breaking changes, and ensures compatibility—without spamming useless PRs.
-
-✨ Features
-Smart dependency upgrades
-Breaking change detection
-Auto-fix for version conflicts
-Test-backed updates
-🧠 Why it matters
-
-Dependencies shouldn’t be a burden. DepKeeper handles them quietly.
-
-## ⚡ VulnStinger by PatchHive
- - Find and patch vulnerabilities—automatically.
-
-VulnStinger scans your codebase for security issues and patches them before they can be exploited.
-
-✨ Features
-Vulnerability detection (patterns + CVEs)
-Auto-generated security patches
-Risk scoring
-Secure coding suggestions
-🧠 Why it matters
-
-Security isn’t optional. VulnStinger makes it continuous.
-
-## 🔧 RefactorBee by PatchHive
- - Continuously improve your codebase.
-
-RefactorBee analyzes your code and applies safe, incremental improvements to readability, performance, and structure.
-
-✨ Features
-Code simplification
-Dead code removal
-Performance optimizations
-Style consistency
-🧠 Why it matters
-
-Great codebases aren’t written—they’re maintained.
-
-## 🧠 (Future) HiveCore by PatchHive
-
-The intelligence layer behind PatchHive.
-
-HiveCore connects all PatchHive products into a unified system, enabling shared context, learning, and coordination across agents.
-
----
-
-## 🧠 Vision
-A fully autonomous maintenance layer for all software.
-
----
-
-## 🛠 Example CLI
+Run HiveCore as the suite control plane:
 
 ```bash
-reaper scan
-reaper fix --auto
-reaper pr
+cd products/hive-core
+cp .env.example .env
+docker compose up --build
 ```
 
----
+HiveCore defaults:
 
-## 📊 Architecture
+- Frontend: `http://localhost:5183`
+- Backend: `http://localhost:8100`
 
-Agents communicate through a shared intelligence layer (HiveMind) and execute tasks in parallel.
+Most products can also run independently:
 
----
-
-## 📢 Launch
-
-PatchHive introduces a new paradigm:
-software that maintains itself.
-
-
-## 🧩 Ecosystem
-
-| Product        | Description |
-|----------------|------------|
-| 💀 RepoReaper  | Autonomous issue resolution |
-| 🔍 IssueHunter | Finds bugs & technical debt |
-| 🧪 TestSwarm   | Generates & runs tests |
-| 🔗 DepKeeper   | Smart dependency updates |
-| ⚡ VulnStinger | Security scanning & patching |
-| 🔧 RefactorBee | Continuous code improvement |
-
----
-
-## 🧠 Architecture
-
-```
-        HiveMind
-            │
-   ┌────────┼────────┐
-IssueHunter │ VulnStinger
-      │     │
-      ▼     ▼
-        RepoReaper
-            │
-   ┌────────┼────────┐
- TestSwarm RefactorBee DepKeeper
+```bash
+cd products/<product>
+cp .env.example .env
+docker compose up --build
 ```
 
----
+For split local development:
 
-## 🔥 Why PatchHive?
+```bash
+cd products/<product>/backend
+cargo run
 
-Because software shouldn't decay.
+cd ../frontend
+npm install
+npm run dev
+```
 
-PatchHive creates systems that:
-- maintain themselves
-- improve over time
-- reduce human overhead
+Backends bind to `0.0.0.0` by default for Docker compatibility. For loopback-only local runs, set:
 
----
+```bash
+PATCHHIVE_BIND_ADDR=127.0.0.1
+```
 
-## 🛣 Roadmap
+## Repository Model
 
-- [ ] RepoReaper v1
-- [ ] TestSwarm integration
-- [ ] IssueHunter release
-- [ ] Multi-repo orchestration
-- [ ] HiveCore intelligence layer
+PatchHive is monorepo-first. Products and shared foundations are built here, then exported to standalone mirrors under the `patchhive` GitHub organization.
 
----
+The standalone repos make each product easier to inspect, run, and adopt, but the monorepo remains the source of truth.
 
-## 🤝 Contributing
+## Core Principles
 
-PRs welcome. Agents welcome.
+- Maintenance work should be continuously visible.
+- Automation should be constrained and reviewable.
+- Repo-specific memory should improve future decisions.
+- Outbound contribution should be clearly attributed.
+- Safety gates should come before autonomous write actions.
+- Trust should be earned through signal quality, not hype.
 
----
+## Status
 
-## 📢 Vision
-
-> A world where codebases maintain themselves.
+PatchHive is in active alpha. It is being built for real operator use first; broader adoption comes after the system proves it can produce useful, reviewable maintenance work consistently.
